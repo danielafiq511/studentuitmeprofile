@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UiTM Student E-Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!-- google fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monomaniac+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+   
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- chartjs -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- style.css -->
+     <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <style>
+      .header-container {
+        background-image: url('img/ptar palam.jpg'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        color: white; 
+        padding: 40px; 
+      }
+      .title {
+        font-size: 36px; 
+        font-weight: bold;
+      }
+    </style>
+
+    <!-- header -->
+<div class="container my-4 header-container rounded">
+    <div class="rgb-header" class="shadow"  >UiTM Student E-Profile</div>
+    <style>
+      .rgb-header {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        background: linear-gradient(90deg, purple, red, green, blue, purple);
+        background-size: 300%; 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        animation: gradientEffect 3s infinite linear;
+        font-family: "Monomaniac One", sans-serif;
+        font-weight: 700;
+       font-size: 35px;
+       text-transform: uppercase;
+       color: transparent;
+       background-size: 500px 100%;
+       background-clip: text;
+      }
+    
+      @keyframes gradientEffect {
+        0% { background-position: 0%; }
+        100% { background-position: 100%; }
+      }
+    </style>
+</div>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <img src="img/uitmlogo.png.png" alt="RMS Logo" width="50px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+            <div class="form-check form-switch">
+               <input class="form-check-input" type="checkbox" id="darkModeToggle" />
+               <label class="form-check-label" for="darkModeToggle" id="themelabel">Dark Mode <i class="fa-solid fa-circle-half-stroke"></i></label>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- content -->
+<div class="container my-4">
+  <p><b>Sign in to continue to UiTM Student E-Profile.</b></p>
+    <form id="loginForm" class="container mt-4" action="profiles.html" method="POST">
+      <div class="form-floating mb-4">
+          <input type="text" class="form-control" id="username" placeholder="Username" required>
+          <label for="username">Username</label>
+      </div>
+      <div class="form-floating mb-4">
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+          <label for="password">Password</label>
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Agree to terms and conditions
+          </label>
+        </div>
+      </div><br>
+
+      <a href="home.html"button type="submit" class="btn btn-primary w-100">Login</a>
+  </form>
+</div>
+
+
+     
+
+  
+     <!-- Footer -->
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+
+  <style>
+    .moving-rgb-line {
+        height: 1px; 
+        margin: 10px 0;
+        animation: changeColor 2s infinite; 
+    }
+
+    @keyframes changeColor {
+        0% {
+            background-color: rgb(255, 0, 0); 
+        }
+        33% {
+            background-color: rgb(0, 255, 0); 
+        }
+        66% {
+            background-color: rgb(0, 0, 255); 
+        }
+        100% {
+            background-color: rgb(255, 0, 0); 
+        }
+    }
+</style>
+
+  <div class="moving-rgb-line"></div>
+  
+  <!-- Footer Content -->
+  <div class="container">
+      <div class="row">
+          <!-- Footer Column 1 -->
+          <div class="col-md-4 text-center">
+              <h5 class="title_footer">UiTM Student E-Profile</h5>
+              <p><b><i>UiTM Di Hatiku Usaha Taqwa Mulia</i></b></p>
+              <img src="img/logo 25tahun.png" alt="RMS Logo" width="100px">
+          </div>
+
+          <!-- Footer Column 2 -->
+          <div class="col-md-4 text-center">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="about.html" class="text-decoration-none">About</a></li>
+                  <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Footer Column 3 -->
+          <div class="col-md-4 text-center">
+              <h5>Contact Us</h5>
+              <p>Email: support@uitm.edu.my</p>
+              <p>Phone: +6012-3456789</p>
+              <p>Address: UiTM Shah Alam, Selangor, Malaysia</p>
+          </div>
+      </div>
+
+      <!-- Divider -->
+      <hr style="border: 0; height: 1px; background-color: #ddd; margin: 20px 0;">
+
+      <!-- Copyright and Sitemap -->
+      <div class="d-flex justify-content-center align-items-center small text-muted">
+        <div>&copy; 2024 UiTM. All Rights Reserved.</div>
+        <span class="mx-2">|</span> 
+        <a href="sitemap.html" class="text-decoration-none">Sitemap</a>
+    </div>
+    
+</footer>
+
+   
+    <!-- bootstrap js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <!-- darkmode script -->
+    <script>
+      function setTheme(theme) {
+          document.documentElement.setAttribute("data-bs-theme", theme);
+          localStorage.setItem("theme", theme);
+          document.getElementById("themeLabel").innerText =
+              theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+      }
+  
+      document
+          .getElementById("darkModeToggle")
+          .addEventListener("change", function (event) {
+              if (event.target.checked) {
+                  setTheme("dark");
+              } else {
+                  setTheme("light"); 
+              }
+          });
+  
+      window.onload = function () {
+          let savedTheme = localStorage.getItem("theme");
+          if (savedTheme) {
+              setTheme(savedTheme); 
+              if (savedTheme === "dark") {
+                  document.getElementById("darkModeToggle").checked = true;
+              }
+          }
+      };
+  </script>
+  
+</body>
+</html>
